@@ -1,0 +1,3 @@
+$(function(){
+    $('.testimonial-slider').slick();
+})
