@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
   Array.from(li).forEach(function(item, i, li) {
     item.addEventListener('click', function(e) {
-      if (active.length > 0 && active[0] !== this) {
+      var currentLi = this;
+      setTimeout(function(){      
+        if (active.length > 0 && active[0] !== currentLi) {
         active[0].classList.remove('active'); 
       }
-      this.classList.add('active');
-      if (active) {
-        active.classList.remove('active');     
-      } 
+        currentLi.classList.add('active');
+      },400)
     });
   });
 });
