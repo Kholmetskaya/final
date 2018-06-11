@@ -45,12 +45,7 @@ gulp.task('minify', function() {
     return gulp.src('assets/font/*')
       .pipe(gulp.dest('./public/font/'));
   });
-  gulp.task('web-srv', function() {
-    gulp.src('public')
-        .pipe(webserver({
-        fallback: 'public/index.html'
-        }));
-});
+
 
 
 gulp.task('watch', function () {
@@ -60,7 +55,12 @@ gulp.task('watch', function () {
     gulp.watch('./assets/*', ['minify']);
     gulp.watch('./assets/font/*', ['font']);
 });
-
+  gulp.task('web-srv', function() {
+    gulp.src('public')
+        .pipe(webserver({
+        fallback: 'public/index.html'
+        }));
+});
 
 // Default Task
 gulp.task('default', ['css', 'js', 'images', 'font', 'minify', "web-srv", 'watch']);
