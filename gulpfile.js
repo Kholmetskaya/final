@@ -46,9 +46,9 @@ gulp.task('minify', function() {
       .pipe(gulp.dest('./public/font/'));
   });
   gulp.task('web-srv', function() {
-    gulp.src('public/')
+    gulp.src('public')
         .pipe(webserver({
-        fallback: 'index.html'
+        fallback: 'public/index.html'
         }));
 });
 
