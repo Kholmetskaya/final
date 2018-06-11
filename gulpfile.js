@@ -48,7 +48,7 @@ gulp.task('minify', function() {
   gulp.task('web-srv', function() {
     gulp.src('public')
         .pipe(webserver({
-        fallback: 'index.html'
+        fallback: 'public/index.html'
         }));
 });
 
