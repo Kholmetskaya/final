@@ -48,7 +48,7 @@ gulp.task('minify', function() {
   gulp.task('web-srv', function() {
     gulp.src('public')
         .pipe(webserver({
-        fallback: 'public/index.html'
+        fallback: 'index.html'
         }));
 });
 
@@ -63,5 +63,5 @@ gulp.task('watch', function () {
 
 
 // Default Task
-gulp.task('default', ['css', 'js', 'images', 'font', 'minify', 'watch', "web-srv"]);
+gulp.task('default', ['css', 'js', 'images', 'font', 'minify', "web-srv", 'watch']);
 
