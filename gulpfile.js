@@ -58,7 +58,7 @@ gulp.task('watch', function () {
   gulp.task('web-srv', function() {
     gulp.src('public')
         .pipe(webserver({
-        fallback: 'public/index.html'
+        fallback: 'index.html'
         }));
 });
 
